@@ -7,6 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
 import { RecoverpasswordComponent } from './pages/recoverpassword/recoverpassword.component';
+import { AuthComponent } from './auth.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -15,11 +17,15 @@ import { RecoverpasswordComponent } from './pages/recoverpassword/recoverpasswor
     LoginComponent,
     SignupComponent,
     ForgotpasswordComponent,
-    RecoverpasswordComponent
+    RecoverpasswordComponent,
+    AuthComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule
-  ]
+  ],
+  providers: [],
+  bootstrap: [AuthComponent]
 })
 export class AuthModule { }

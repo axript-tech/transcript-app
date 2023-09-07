@@ -15,6 +15,9 @@ import { ManageDepartmentsComponent } from './pages/manage-departments/manage-de
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RightbarComponent } from './page-sections/rightbar/rightbar.component';
 import { PageNotFoundComponent } from './page-sections/page-not-found/page-not-found.component';
+import { FooterComponent } from './page-sections/footer/footer.component';
+import { AuthComponent } from './auth/auth.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,13 @@ import { PageNotFoundComponent } from './page-sections/page-not-found/page-not-f
     ManageDepartmentsComponent,
     DashboardComponent,
     RightbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,9 +8,10 @@ import { PageNotFoundComponent } from './page-sections/page-not-found/page-not-f
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   { path: 'dashboard', component: DashboardComponent},
-  { path: '**', component: PageNotFoundComponent },
-
-  
+  //{ path: '**', component: PageNotFoundComponent },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module')
+      .then(m => m.AuthModule)//canActivate: [AuthenticationGuard]
+  },
 ];
 
 @NgModule({
